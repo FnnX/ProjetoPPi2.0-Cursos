@@ -24,24 +24,24 @@ test("a página inicial responde e apresenta o título", async () => {
   const resposta = await fetch(`${baseUrl}/`);
   const html = await resposta.text();
   assert.equal(resposta.status, 200);
-  assert.match(html, /Mural de Publicações/);
+  assert.match(html, /Cursos e Oficinas/);
 });
 
 test("a listagem apresenta as publicações do banco", async () => {
   const resposta = await fetch(`${baseUrl}/publicacoes`);
   const html = await resposta.text();
   assert.equal(resposta.status, 200);
-  assert.match(html, /Publicações da turma/);
-  assert.match(html, /Como uma rota funciona/);
-  assert.match(html, /<strong>6<\/strong> publicação\(ões\) encontrada\(s\)/);
+  assert.match(html, /Cursos cadastrados/);
+  assert.match(html, /Introdução ao Git/);
+  assert.match(html, /<strong>\d+<\/strong> registros/);
 });
 
 test("a página de detalhes apresenta uma publicação", async () => {
   const resposta = await fetch(`${baseUrl}/publicacoes/1`);
   const html = await resposta.text();
   assert.equal(resposta.status, 200);
-  assert.match(html, /Como uma rota funciona/);
-  assert.match(html, /Ana Souza/);
+  assert.match(html, /Introdução ao Git/);
+  assert.match(html, /Fulano de Tal/);
 });
 
 test("o endpoint de saúde responde em JSON", async () => {

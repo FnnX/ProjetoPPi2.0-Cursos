@@ -66,36 +66,65 @@ async function prepararBanco() {
   await sequelize.sync();
 
   const quantidade = await Publicacao.count();
-  await Publicacao.bulkCreate([
-    //dados de exemplo para popular o banco de dados; O mural.sql serve como referência
-    {
-      icone: "/images/ifrn.png",
-      status: "DISPONÍVEL",
-      titulo: "Introdução ao Git",
-      instrutor: "Fulano de Tal",
-      cargaHoraria: "4 horas",
-      vagas: 20,
-      descricao: "Aprenda os conceitos básicos do Git"
-    },
-    {
-      icone: "/images/ifrn.png",
-      status: "EM ANDAMENTO",
-      titulo: "Oficina de APIs",
-      instrutor: "Cicrano de Tal",
-      cargaHoraria: "6 horas",
-      vagas: 20,
-      descricao: "Aprenda a criar e consumir APIs"
-    },
-    {
-      icone: "/images/ifrn.png",
-      status: "DESTAQUE",
-      titulo: "CSS responsivo",
-      instrutor: "Beltrano de Tal",
-      cargaHoraria: "3 horas",
-      vagas: 20,
-      descricao: "Aprenda a criar layouts CSS"
-    }
-  ]);
+  if (quantidade === 0) {
+    await Publicacao.bulkCreate([
+      //dados de exemplo para popular o banco de dados; O mural.sql serve como referência
+      {
+        icone: "/images/ifrn.png",
+        status: "DISPONÍVEL",
+        titulo: "Introdução ao Git",
+        instrutor: "Fulano de Tal",
+        cargaHoraria: "4 horas",
+        vagas: 20,
+        descricao: "Aprenda os conceitos básicos do Git"
+      },
+      {
+        icone: "/images/ifrn.png",
+        status: "EM ANDAMENTO",
+        titulo: "Oficina de APIs",
+        instrutor: "Cicrano de Tal",
+        cargaHoraria: "6 horas",
+        vagas: 20,
+        descricao: "Aprenda a criar e consumir APIs"
+      },
+      {
+        icone: "/images/ifrn.png",
+        status: "DESTAQUE",
+        titulo: "CSS responsivo",
+        instrutor: "Beltrano de Tal",
+        cargaHoraria: "3 horas",
+        vagas: 20,
+        descricao: "Aprenda a criar layouts CSS"
+      },
+      {
+        icone: "/images/ifrn.png",
+        status: "DISPONÍVEL",
+        titulo: "Fundamentos de Node.js",
+        instrutor: "Marcelo",
+        cargaHoraria: "6 horas",
+        vagas: 20,
+        descricao: "Aprenda a criar aplicações com Node.js"
+      },
+      {
+        icone: "/images/ifrn.png",
+        status: "DISPONÍVEL",
+        titulo: "Banco de dados com SQLite",
+        instrutor: "Daniel",
+        cargaHoraria: "8 horas",
+        vagas: 20,
+        descricao: "Aprenda a criar bancos de dados com SQLite"
+      },
+      {
+        icone: "/images/ifrn.png",
+        status: "DISPONÍVEL",
+        titulo: "Interfaces com Handlebars",
+        instrutor: "André",
+        cargaHoraria: "6 horas",
+        vagas: 20,
+        descricao: "Aprenda a criar interfaces com Handlebars"
+      }
+    ]);
+  }
 }
 
 module.exports = { createApp, prepararBanco };

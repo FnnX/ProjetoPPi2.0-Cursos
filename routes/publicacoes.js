@@ -6,7 +6,8 @@ const router = express.Router();
 router.get("/", async (req, res, next) => {
   try {
     const publicacoes = await Publicacao.findAll({
-      order: [["createdAt", "DESC"]],
+      // Ordena as publicações pelo título em ordem alfabética
+      order: [["titulo", "ASC"]],
       raw: true
     });
 

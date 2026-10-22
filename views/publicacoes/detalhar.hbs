@@ -1,10 +1,36 @@
-<article class="detalhe">
-  <a class="voltar" href="/publicacoes">← Voltar para a lista</a>
-  <p class="categoria">carga horária total: {{publicacao.cargaHoraria}}</p>
-  <h1>{{publicacao.titulo}}</h1>
-  <p class="detalhe__conteudo">{{publicacao.descricao}}</p>
-  <footer>
-    <span>Por {{publicacao.instrutor}}</span>
-    <span>Publicada em {{formatarData publicacao.createdAt}}</span>
-  </footer>
-</article>
+<section class="detalhe-layout" aria-labelledby="detalhe-titulo">
+  <article class="detalhe detalhe__informacoes">
+    <h1 id="detalhe-titulo">{{publicacao.titulo}}</h1>
+
+    <div class="detalhe__campos">
+      <div class="detalhe__campo">
+        <p class="texto">titulo:</p>
+        <p class="muted">{{publicacao.titulo}}</p>
+      </div>
+      <div class="detalhe__campo">
+        <p class="texto">instrutor:</p>
+        <p class="muted">{{publicacao.instrutor}}</p>
+      </div>
+      <div class="detalhe__campo">
+        <p class="texto">carga horária:</p>
+        <p class="muted">{{publicacao.cargaHoraria}}</p>
+      </div>
+      <div class="detalhe__campo">
+        <p class="texto">vagas:</p>
+        <p class="muted">{{publicacao.vagas}}</p>
+      </div>
+      <div class="detalhe__campo">
+        <p class="texto">descrição:</p>
+        <p class="muted">{{publicacao.descricao}}</p>
+      </div>
+    </div>
+  </article>
+
+  <aside class="detalhe__lateral">
+    <section class="detalhe__principal" aria-labelledby="informacao-principal">
+      <h2 id="informacao-principal">Informação principal</h2>
+      <p class="detalhe__vagas">{{publicacao.vagas}} vagas disponíveis</p>
+    </section>
+    <a class="botao botao--contorno" href="/publicacoes">Voltar para a lista</a>
+  </aside>
+</section>
