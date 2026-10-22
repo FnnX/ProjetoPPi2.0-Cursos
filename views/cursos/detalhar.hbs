@@ -1,27 +1,27 @@
 <section class="detalhe-layout" aria-labelledby="detalhe-titulo">
   <article class="detalhe detalhe__informacoes">
-    <h1 id="detalhe-titulo">{{publicacao.titulo}}</h1>
+    <h1 id="detalhe-titulo">{{curso.titulo}}</h1>
 
     <div class="detalhe__campos">
       <div class="detalhe__campo">
         <p class="texto">titulo:</p>
-        <p class="muted">{{publicacao.titulo}}</p>
+        <p class="muted">{{curso.titulo}}</p>
       </div>
       <div class="detalhe__campo">
         <p class="texto">instrutor:</p>
-        <p class="muted">{{publicacao.instrutor}}</p>
+        <p class="muted">{{curso.instrutor}}</p>
       </div>
       <div class="detalhe__campo">
         <p class="texto">carga horária:</p>
-        <p class="muted">{{publicacao.cargaHoraria}}</p>
+        <p class="muted">{{curso.cargaHoraria}}</p>
       </div>
       <div class="detalhe__campo">
         <p class="texto">vagas:</p>
-        <p class="muted">{{publicacao.vagas}}</p>
+        <p class="muted">{{curso.vagas}}</p>
       </div>
       <div class="detalhe__campo">
         <p class="texto">descrição:</p>
-        <p class="muted">{{publicacao.descricao}}</p>
+        <p class="muted">{{curso.descricao}}</p>
       </div>
     </div>
   </article>
@@ -29,8 +29,8 @@
   <aside class="detalhe__lateral">
     <section class="detalhe__principal" aria-labelledby="informacao-principal">
       <h2 id="informacao-principal">Informação principal</h2>
-      <p class="detalhe__vagas">{{publicacao.vagas}} vagas disponíveis</p>
+      <p class="detalhe__vagas">{{curso.vagas}} vagas disponíveis</p>
     </section>
-    <a class="botao botao--contorno" href="/publicacoes">Voltar para a lista</a>
+    <a class="botao botao--contorno" href="/cursos">Voltar para a lista</a>
   </aside>
 </section>

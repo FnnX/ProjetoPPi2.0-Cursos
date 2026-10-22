@@ -4,7 +4,7 @@ Grupo 8: João Victor; Lucas; Joatan; Hugo
 O intuito desse projeto é exibir uma lista acessível, com interface intuitiva, de cursos e oficinas disponíveis para alunos realizarem, facilitando o acesso a seus dados, bem como sua carga horária e vagas disponíveis.
 O projeto, portanto, instiga os alunos à participarem mais e evita que os cursos e oficinas sejam desconhecidos por parte do grupo acadêmico.
 
-Entidade principal: publicacao
+Entidade principal: Curso
 
 Tecnologias utilizadas: 
     JavaScript, 
@@ -29,8 +29,8 @@ Pré-requisitos:
 Rotas disponíveis:
     /               exibe página inicial
     /saude          retorna o estado de aplicação do JSON
-    /publicacoes         lista os publicacoes e oficinas
-    /publicacoes/:id     exibe detalhes do registro por meio da id
+    /cursos          lista os cursos e oficinas
+    /cursos/:id      exibe detalhes do registro por meio do id
 
 Organização dos diretórios:
     database/ — armazena o banco de dados SQLite.
@@ -43,7 +43,7 @@ Organização dos diretórios:
 
         public/stylesheets/ — folhas de estilo.
 
-    routes/ — define as rotas da aplicação: página inicial, saúde e publicações.
+    routes/ — define as rotas da aplicação: página inicial, saúde e cursos.
 
     test/ — contém os testes automatizados.
 
@@ -53,10 +53,10 @@ Organização dos diretórios:
 
         views/partials/ — componentes reutilizáveis, como os cartões.
 
-        views/publicacoes/ — templates para listar e detalhar publicações.
+        views/cursos/ — templates para listar e detalhar cursos.
 
 Correspondência entre aplicação e os wireframes:
     GET /                   Página inicial
-    GET /publicacoes             Listagem de publicacoes
-    GET /publicacoes/:id    Destalhes de uma publicacao
+    GET /cursos             Listagem de cursos
+    GET /cursos/:id         Detalhes de um curso
     erro na rota            Tela de erro

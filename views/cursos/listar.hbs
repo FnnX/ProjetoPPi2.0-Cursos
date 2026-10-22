@@ -6,15 +6,15 @@
   </p>
 </header>
 
-{{#if possuiPublicacoes}}
-  <section class="grade" aria-label="Lista de publicações">
-    {{#each publicacoes}}
-      {{> cartao-publicacao lista=true}}
+{{#if possuiCursos}}
+  <section class="grade" aria-label="Lista de cursos">
+    {{#each cursos}}
+      {{> componente-cursos-oficinas lista=true}}
     {{/each}}
   </section>
 {{else}}
   <section class="estado-vazio">
-    <h2>Nenhuma publicação cadastrada</h2>
+    <h2>Nenhum curso cadastrado</h2>
     <p>O banco de dados ainda não possui registros para apresentar.</p>
   </section>
 {{/if}}

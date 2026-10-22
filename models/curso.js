@@ -1,7 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  //cria o modelo de publicação, que será mapeado para a tabela "publicacoes" no banco de dados
   return sequelize.define(
-    "Publicacao",
+    "Curso",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -53,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     {
-      tableName: "publicacoes",
+      tableName: "cursos",
       timestamps: true
     }
   );

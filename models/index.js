@@ -3,10 +3,10 @@ const { Sequelize, DataTypes } = require("sequelize");
 
 const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: path.join(__dirname, "..", "database", "mural.sqlite"),
+  storage: path.join(__dirname, "..", "database", "cursos.sqlite"),
   logging: false
 });
 
-const Publicacao = require("./publicacao")(sequelize, DataTypes);
+const Curso = require("./curso")(sequelize, DataTypes);
 
-module.exports = { sequelize, Publicacao };
+module.exports = { sequelize, Curso };

@@ -1,9 +1,9 @@
 const path = require("node:path");
 const express = require("express");
 const { engine } = require("express-handlebars");
-const { sequelize, Publicacao } = require("./models");
+const { sequelize, Curso } = require("./models");
 const indexRouter = require("./routes/index");
-const publicacoesRouter = require("./routes/publicacoes");
+const cursosRouter = require("./routes/cursos");
 
 function createApp() {
   const app = express();
@@ -33,7 +33,7 @@ function createApp() {
   app.use(express.static(path.join(__dirname, "public")));
 
   app.use("/", indexRouter);
-  app.use("/publicacoes", publicacoesRouter);
+  app.use("/cursos", cursosRouter);
 
   app.use((req, res) => {
     res.status(404).render("404", {
@@ -65,10 +65,9 @@ async function prepararBanco() {
   await sequelize.authenticate();
   await sequelize.sync();
 
-  const quantidade = await Publicacao.count();
+  const quantidade = await Curso.count();
   if (quantidade === 0) {
-    await Publicacao.bulkCreate([
-      //dados de exemplo para popular o banco de dados; O mural.sql serve como referência
+    await Curso.bulkCreate([
       {
         icone: "/images/Git-Icon-1788C.png",
         status: "DISPONÍVEL",

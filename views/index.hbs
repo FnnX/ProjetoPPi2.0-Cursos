@@ -4,20 +4,20 @@
     <h1>{{titulo}}</h1>
     <p class="hero__subtitulo">{{subtitulo}}</p>
 
-    <a class="botao" href="/publicacoes">Conhecer o acervo</a>
+    <a class="botao" href="/cursos">Conhecer o acervo</a>
   </section>
 
   <h2>Destaques do portal</h2>
 
-  {{#if possuiPublicacoes}}
-    <section class="grade" aria-label="Lista de publicações">
-      {{#each publicacoes}}
-        {{> cartao-publicacao}}
+  {{#if possuiCursos}}
+    <section class="grade" aria-label="Lista de cursos">
+      {{#each cursos}}
+        {{> componente-cursos-oficinas}}
       {{/each}}
     </section>
   {{else}}
     <section class="estado-vazio">
-      <h2>Nenhuma publicação cadastrada</h2>
+      <h2>Nenhum curso cadastrado</h2>
       <p>O banco de dados ainda não possui registros para apresentar.</p>
     </section>
   {{/if}}

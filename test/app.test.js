@@ -27,8 +27,8 @@ test("a página inicial responde e apresenta o título", async () => {
   assert.match(html, /Cursos e Oficinas/);
 });
 
-test("a listagem apresenta as publicações do banco", async () => {
-  const resposta = await fetch(`${baseUrl}/publicacoes`);
+test("a listagem apresenta os cursos do banco", async () => {
+  const resposta = await fetch(`${baseUrl}/cursos`);
   const html = await resposta.text();
   assert.equal(resposta.status, 200);
   assert.match(html, /Cursos cadastrados/);
@@ -36,8 +36,8 @@ test("a listagem apresenta as publicações do banco", async () => {
   assert.match(html, /<strong>\d+<\/strong> registros/);
 });
 
-test("a página de detalhes apresenta uma publicação", async () => {
-  const resposta = await fetch(`${baseUrl}/publicacoes/1`);
+test("a página de detalhes apresenta um curso", async () => {
+  const resposta = await fetch(`${baseUrl}/cursos/1`);
   const html = await resposta.text();
   assert.equal(resposta.status, 200);
   assert.match(html, /Introdução ao Git/);
