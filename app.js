@@ -70,7 +70,7 @@ async function prepararBanco() {
     await Publicacao.bulkCreate([
       //dados de exemplo para popular o banco de dados; O mural.sql serve como referência
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/Git-Icon-1788C.png",
         status: "DISPONÍVEL",
         titulo: "Introdução ao Git",
         instrutor: "Fulano de Tal",
@@ -79,7 +79,7 @@ async function prepararBanco() {
         descricao: "Aprenda os conceitos básicos do Git"
       },
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/api.png",
         status: "EM ANDAMENTO",
         titulo: "Oficina de APIs",
         instrutor: "Cicrano de Tal",
@@ -88,7 +88,7 @@ async function prepararBanco() {
         descricao: "Aprenda a criar e consumir APIs"
       },
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/css3-seeklogo.png",
         status: "DESTAQUE",
         titulo: "CSS responsivo",
         instrutor: "Beltrano de Tal",
@@ -97,7 +97,7 @@ async function prepararBanco() {
         descricao: "Aprenda a criar layouts CSS"
       },
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/node-js-seeklogo.png",
         status: "DISPONÍVEL",
         titulo: "Fundamentos de Node.js",
         instrutor: "Marcelo",
@@ -106,7 +106,7 @@ async function prepararBanco() {
         descricao: "Aprenda a criar aplicações com Node.js"
       },
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/sqlite-seeklogo.svg",
         status: "DISPONÍVEL",
         titulo: "Banco de dados com SQLite",
         instrutor: "Daniel",
@@ -115,7 +115,7 @@ async function prepararBanco() {
         descricao: "Aprenda a criar bancos de dados com SQLite"
       },
       {
-        icone: "/images/ifrn.png",
+        icone: "/images/handlebars-js.png",
         status: "DISPONÍVEL",
         titulo: "Interfaces com Handlebars",
         instrutor: "André",
