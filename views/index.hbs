@@ -1,14 +1,14 @@
-<section class="hero__conteudo">
-  <p class="rotulo">Servidor funcionando</p>
-  <h1>{{titulo}}</h1>
-  <p class="hero__subtitulo">{{subtitulo}}</p>
+<section class="hero">
+  <section class="hero__conteudo">
+    <p class="rotulo">Servidor funcionando</p>
+    <h1>{{titulo}}</h1>
+    <p class="hero__subtitulo">{{subtitulo}}</p>
 
-  <a class="botao" href="/publicacoes">Conhecer o acervo</a>
-</section>
-<<<<<<< HEAD
+    <a class="botao" href="/publicacoes">Conhecer o acervo</a>
+  </section>
+
   <h2>Destaques do portal</h2>
-  
-  <!--cartões de cursos-->
+
   {{#if possuiPublicacoes}}
     <section class="grade" aria-label="Lista de publicações">
       {{#each publicacoes}}
@@ -16,29 +16,11 @@
       {{/each}}
     </section>
   {{else}}
-
-=======
-
-<h2>Destaques do portal</h2>
-
-{{#if possuiPublicacoes}}
-  <section class="grade" aria-label="Lista de publicações">
-    {{#each publicacoes}}
-      {{> cartao-publicacao}}
-    {{/each}}
-  </section>
-{{else}}
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
-  <section class="estado-vazio">
-    <h2>Nenhuma publicação cadastrada</h2>
-    <p>O banco de dados ainda não possui registros para apresentar.</p>
-  </section>
-{{/if}}
-<<<<<<< HEAD
-<section>
-=======
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
-
+    <section class="estado-vazio">
+      <h2>Nenhuma publicação cadastrada</h2>
+      <p>O banco de dados ainda não possui registros para apresentar.</p>
+    </section>
+  {{/if}}
 </section>
 
 <section aria-labelledby="fluxo" class="painel">

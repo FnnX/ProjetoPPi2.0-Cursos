@@ -39,11 +39,7 @@ a { color: var(--vermelho); }
   background: var(--branco);
 }
 
-<<<<<<< HEAD
-.cabecalho__conteudo::before { /*barra lateral*/
-=======
 .cabecalho__conteudo::before { /* barra lateral */
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
   content: "";
   position: absolute;
   top: 0;
@@ -93,11 +89,7 @@ a { color: var(--vermelho); }
   padding: clamp(28px, 6vw, 64px);
   border: 1px solid var(--borda);
   border-radius: 24px;
-<<<<<<< HEAD
-  background: linear-gradient(135deg, var(--branco), var(--azul-100)); /*manter gradiente?*/
-=======
   background: linear-gradient(135deg, var(--branco), var(--azul-100));
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
   box-shadow: var(--sombra);
 }
 
@@ -212,13 +204,9 @@ h2 { margin-top: 0; }
   gap: 20px;
 }
 
-<<<<<<< HEAD
-=======
 /* ==========================================================================
    ESTILO PADRÃO DO CARTÃO (Página /inicio)
    ========================================================================== */
-
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
 .cartao {
   position: relative;
   display: flex;
@@ -232,11 +220,7 @@ h2 { margin-top: 0; }
 }
 
 .cartao::before {
-<<<<<<< HEAD
   /* barra lateral do cartão */
-=======
-  /* Barra lateral vermelha da Home */
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
   content: "";
   position: absolute;
   top: 1px;
@@ -247,8 +231,6 @@ h2 { margin-top: 0; }
   background: var(--vermelho);
 }
 
-<<<<<<< HEAD
-=======
 .cartao h2 {
   margin-top: 18px;
   font-size: 1.25rem;
@@ -258,21 +240,12 @@ h2 { margin-top: 0; }
 
 .cartao p { flex: 1; }
 
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
 .cartao__topo, .cartao__rodape, .detalhe footer {
   display: flex;
   justify-content: space-between;
   gap: 16px;
 }
 
-<<<<<<< HEAD
-.identificador, .cartao__rodape, .detalhe footer { color: var(--muted); font-size: .9rem; }
-.cartao h2 { margin-top: 18px; font-size: 1.25rem; }
-.cartao p { flex: 1; }
-.cartao__rodape { align-items: center; margin-top: 18px; }
-.cartao__rodape a { font-weight: 700; }
-
-=======
 .identificador, .cartao__rodape, .detalhe footer {
   color: var(--muted);
   font-size: .9rem;
@@ -366,7 +339,6 @@ h2 { margin-top: 0; }
    DEMAIS SEÇÕES
    ========================================================================== */
 
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
 .detalhe { max-width: 800px; margin-inline: auto; }
 .detalhe h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .detalhe__conteudo { margin-block: 28px; font-size: 1.15rem; }
@@ -392,8 +364,4 @@ code { padding: 2px 6px; border-radius: 4px; background: var(--vermelho); }
   .grade { grid-template-columns: 1fr; }
   .conteudo-principal { padding-block: 32px 48px; }
   .cartao__rodape, .detalhe footer { align-items: flex-start; flex-direction: column; }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7dd59b1 (Estilização dos cartões ao detalhar conteúdo)
